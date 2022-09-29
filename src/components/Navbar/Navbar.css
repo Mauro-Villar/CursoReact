@@ -1,0 +1,24 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    background-color: orange;
+    width: 100vw;
+    
+}
+
+div {
+    display: flex;
+
+}
+
+.logo{
+    width: 90px;
+    height: 60px;
+    
+}
+
+.navTitle{
+    font-size: 25px;
+    padding-left: 20px;
+}
+
