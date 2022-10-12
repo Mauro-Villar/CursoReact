@@ -21,11 +21,22 @@ const ItemListContainer = () => {
         })
         }, [categoryId])
 
-    if(loading) {
-        return <p>Loading...</p>
-    }
-
-    
+        
+        useEffect(() => {
+            try {
+                getProducts().then(response => {
+                    setLoading(false)
+                    setProducts(response)
+                })
+            }catch(error){
+                setLoading(false)
+                console.log(error)
+            }
+        },[])
+        
+        if(loading) {
+            return <p>Loading...</p>
+        }
 
     return ( 
     <div className= 'ItemListContainer'>
