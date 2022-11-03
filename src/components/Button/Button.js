@@ -1,6 +1,7 @@
 import './Button.css'
 
-const Button = ({ children, style }) => {
-    return <button className='Button' style={style}>{children}</button>
-}
-export default Button
+export const Button = ({ btnTxt = '', className = 'defaultBtn', event }) => (
+  <button className={className} onClick={event}>
+    {btnTxt}
+  </button>
+)

@@ -1,16 +1,198 @@
-Button{
-    margin: 25px 115px;
-    padding: 5px;
-    height: 55px;
-    width: 215px;
-    align-items: center;
-    background-color: rgba(232, 117, 17, 0.658);
-    border: 0;
-    border-radius:28px;
-    color: white;
-    font-size: 23px;
+/* LOG IN BUTTON STYLES */
+.logInButton,
+.defaultBtn {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid var(--ndColor);
+    color: #fff;
+    background-color: var(--ndColor);
+    padding: var(--padding);
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+    font-family: var(--stFont);
+    height: 2.6rem;
 }
 
-Button:hover{
-    scale: 1.2;
+.defaultBtn:hover,
+.logInButton:hover {
+    background: 0 0;
+    color: var(--ndColor);
 }
+
+/* LOG IN BUTTON STYLES */
+
+/* ADD TO CART BUTTON STYLES */
+.addToCart {
+    font-size: .8em;
+    font-weight: 700;
+    position: relative;
+    text-transform: uppercase;
+    width: 80%;
+    padding: 0 .2em;
+    cursor: pointer;
+}
+
+.hoverEfct {
+    color: #FFF;
+    border: 2px solid #000;
+    box-shadow: 0px 0px 0px 1px var(--ndColor) inset;
+    background-color: var(--ndColor);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.hoverEfct:hover {
+    border: 2px solid var(--ndColor);
+    background-color: #FFF;
+    color: var(--ndColor);
+    font-weight: bold;
+    box-shadow: 0px 0px 0px 4px #EEE inset;
+}
+
+/* ADD TO CART BUTTON STYLES */
+
+/*BUTTON DISABLED*/
+
+.btnDisabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/*BUTTON DISABLED*/
+
+/*SEARCH BUTTON*/
+
+.searchBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60px;
+    border: 0;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    background-color: var(--ndColor);
+    color: #fff;
+}
+
+.searchBtn:hover {
+    background-color: #0546a8;
+}
+
+/*SEARCH BUTTON*/
+
+/*BUY BUTTON */
+.buyButton {
+    background-color: #3483fa;
+    border-color: #3483fa;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 0.5em 1.3em;
+    border-bottom: solid #3483fa;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 80%;
+}
+
+.buyButton:active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+/*BUY BUTTON */
+
+/* REMOVE CART BTN */
+
+.removeBtn {
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+}
+
+.removeBtn:hover,
+.removeBtn:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF4742;
+}
+
+.removeBtn:active {
+    opacity: .5;
+}
+
+/* REMOVE CART BTN */
+
+
+/* CLEAN CART BTN */
+.cleanCart {
+    appearance: none;
+    backface-visibility: hidden;
+    background-color: #2f80ed;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--ndFont);
+    font-size: 15px;
+    font-weight: 500;
+    height: 2em;
+    line-height: 1.5;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    transform: translate3d(0, 0, 0);
+    transition: all .3s;
+    padding: 0 1.2em;
+}
+
+.cleanCart:hover {
+    background-color: #1366d6;
+    box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: .35s;
+}
+
+.cleanCart:hover:after {
+    opacity: .5;
+}
+
+.cleanCart:active {
+    box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
+    transform: translateY(2px);
+    transition-duration: .35s;
+}
+
+.cleanCart:active:after {
+    opacity: 1;
+}
+
+/* CLEAN CART BTN */

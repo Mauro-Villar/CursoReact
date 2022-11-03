@@ -1,33 +1,53 @@
-import './ItemCount.css'
 import { useState } from 'react'
+import { Button } from '../Button/Button'
+import { PlusIcon, NegativeIcon } from '../Button/MyIcons/Icons'
+import './ItemCount.css'
 
-const ItemCount = ({stock = 0, initial = 1, onAdd})=> {
-    const [quantity, setQuantity] = useState(initial)
+export const Counter = ({ stock, initialValue, addToCart }) => {
+  const [count, setCount] = useState(initialValue)
 
-    const increment = () => {
-    if(quantity < stock) {
-            setQuantity(quantity+1)
-        } 
-    }
+  const plusIcon =
+    count > initialValue
+      ? (
+        <NegativeIcon event={() => { setCount(prevCount => prevCount - 1) }} />
+        )
+      : (
+        <NegativeIcon className='itemOpacity' />
+        )
 
-    const decrement = () => {
-        if(quantity > 1) {
-        setQuantity(quantity - 1)
-        }     
-    }
+  const minusIcon =
+    count < stock
+      ? (
+        <PlusIcon event={() => { setCount(prevCount => prevCount + 1) }} />
+        )
+      : (
+        <PlusIcon className='itemOpacity' />
+        )
 
-    return(
-        <div className='Counter'>          
-            <div className='Controls'>
-                <button className="Button" onClick={decrement}>-</button>
-                <h4 className='Number'>{quantity}</h4>
-                <button className="Button" onClick={increment}>+</button>
-            </div>
-            <div>
-                <button className="Button" onClick={() => onAdd(quantity)}>Agregar al carrito</button>
-            </div>
-        </div>
-)
+  const trueFalseButton =
+    count > initialValue
+      ? (
+        <Button
+          btnTxt='Limpiar cantidad'
+          className='addToCart hoverEfct'
+          event={() => { setCount(initialValue) }}
+        />
+        )
+      : (
+        <Button btnTxt='Limpiar carrito' className='addToCart btnDisabled' />
+        )
 
+  return (
+    <div className='counterContainer'>
+      <div className='countSection'>
+        {plusIcon}
+        <h6>{count}</h6>
+        {minusIcon}
+      </div>
+      <div className='keypadCont'>
+        {trueFalseButton}
+      </div>
+      {count > 0 ? <Button className='buyButton' btnTxt='Añadir al carrito' event={() => addToCart(count)} /> : <Button className='buyButton btnDisabled' btnTxt='Añadir al carrito' />}
+    </div>
+  )
 }
-export default ItemCount

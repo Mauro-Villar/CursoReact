@@ -21,7 +21,7 @@ export const getProducts = () => {
     })
 }
 
-export const getProductById = (id) => {
+export const getProductById = (id) => {                
     return new Promise (resolve => {
         setTimeout(() => {
             resolve(products.find(prod => {

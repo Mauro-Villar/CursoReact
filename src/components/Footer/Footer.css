@@ -1,0 +1,60 @@
+.footerContainer {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: var(--ndFont);
+    background: #26262e;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+    gap: 20px;
+    padding: 1rem 0rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-top: auto;
+}
+
+.contactFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+    gap: 15px;
+}
+
+.contactFooter a {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.newsLetter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.payMethod {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.payMethod picture img {
+    max-width: 5rem;
+}
+
+@media screen and (max-width: 991px) {
+    .footerContainer {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 1rem;
+    }
+
+    .contactFooter {
+        display: none;
+    }
+}
