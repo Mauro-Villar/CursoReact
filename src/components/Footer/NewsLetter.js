@@ -1,4 +1,4 @@
-import { Input, InputWrapper } from '@mantine/core'
+import {InputWrapper , Input  } from '@mantine/core';
 
 export const NewsLetter = () => {
   return (

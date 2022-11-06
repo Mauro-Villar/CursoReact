@@ -12,7 +12,7 @@ export const FooterContact = () => {
       <div>
         <Link to='/'>Hardware Store ©</Link>
         <span>
-          Horarios de atencion: Todos los dias
+          Horarios de atencion: Lunes a Viernes 9:00 a 18:00Hs
         </span>
       </div>
     </div>

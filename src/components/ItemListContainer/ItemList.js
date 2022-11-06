@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import './ItemListContainer.css'
 import { Product } from './Item'
 import { Spinner } from '../Button/Spinner/Spinner'
-import { getDataBase } from '../../Services/Firebase/index'
+import { getDataBase } from '../../services/Firebase/index'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { useLoading } from '../../Hooks/LoadingHook'
 
